@@ -2,10 +2,10 @@ name: yargitay-gputest
 channels:
   - defaults
 dependencies:
-  - datasets>=2.10.1
-  - evaluate>=0.4.0
-  - numpy>=1.22.4
-  - transformers>=4.25.1
+  - datasets==2.10.1
+  - evaluate==0.4.0
+  - numpy==1.22.4
+  - transformers==4.25.1
   - pip
   - pip:
     - mlflow
