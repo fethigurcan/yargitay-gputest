@@ -1,7 +1,6 @@
 import numpy as np
 import evaluate
 import mlflow
-import mlflow.sklearn
 
 from datasets import load_dataset
 from transformers import AutoTokenizer
@@ -47,7 +46,7 @@ if __name__ == "__main__":
         eval_dataset=small_eval_dataset,
         compute_metrics=compute_metrics,
     )
-    
+
     trainer.train()
 
     mlflow.end_run()
