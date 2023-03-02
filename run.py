@@ -1,5 +1,7 @@
 import numpy as np
 import evaluate
+import mlflow
+import mlflow.sklearn
 
 from datasets import load_dataset
 from transformers import AutoTokenizer
@@ -37,6 +39,7 @@ if __name__ == "__main__":
 
     # create a trainer
     training_args = TrainingArguments(output_dir="test_trainer", evaluation_strategy="epoch", report_to="none")
+    
     trainer = Trainer(
         model=model,
         args=training_args,
@@ -45,5 +48,8 @@ if __name__ == "__main__":
         compute_metrics=compute_metrics,
     )
     
-    # train the model
     trainer.train()
+
+    mlflow.end_run()
+
+    
