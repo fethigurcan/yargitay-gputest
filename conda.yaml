@@ -1,12 +1,9 @@
 name: yargitay-gputest
 channels:
   - defaults
-  - pytorch
 dependencies:
-  - pytorch
   - pip
   - pip:
-    - torch
     - datasets==2.10.1
     - evaluate==0.4.0
     - numpy==1.22.4
