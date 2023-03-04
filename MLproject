@@ -7,5 +7,5 @@ entry_points:
     #parameters:
     #  alpha: {type: float, default: 0.5}
     #  l1_ratio: {type: float, default: 0.1}
-    command: "python3 -m torch.distributed.launch run.py"
+    command: "python3 -m torch.distributed.launch --nproc_per_node 4 run.py"
     # {alpha} {l1_ratio}"
