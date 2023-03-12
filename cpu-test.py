@@ -65,6 +65,7 @@ def test():
 
 
 if __name__=='__main__':
+    mlflow.pytorch.autolog()
     n_epochs = 3
     batch_size_train = 64
     batch_size_test = 1000
