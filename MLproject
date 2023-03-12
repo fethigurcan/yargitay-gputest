@@ -16,7 +16,7 @@ entry_points:
       dataset: {type: str, default: "20newsgroups"}
 
     command: |
-          python bert_news_classification.py \
+          python bert-news-classification.py \
             --max_epochs {max_epochs} \
             --devices {devices} \
             --strategy {strategy} \
