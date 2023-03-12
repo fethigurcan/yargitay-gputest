@@ -105,9 +105,10 @@ if __name__=='__main__':
     test_counter = [i*len(train_loader.dataset) for i in range(n_epochs + 1)]
 
     test()
-    for epoch in range(1, n_epochs + 1):
-      train(epoch)
-      test()
+    with mlflow.start_run():
+        for epoch in range(1, n_epochs + 1):    
+            train(epoch)
+            test()
 
     mlflow.end_run()
 
