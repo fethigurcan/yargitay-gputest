@@ -14,8 +14,8 @@ dependencies:
     - cloudpickle==1.6.0
     - boto3
     - pandas
-    - torch>=1.11.0
+    #- torch>=1.11.0
     - torchdata
-    - torchtext==0.12.0
-    - pytorch-lightning==1.7.6
+    - torchtext
+    - pytorch-lightning
     - protobuf<4.0.0
