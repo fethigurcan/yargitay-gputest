@@ -27,6 +27,7 @@ class Net(nn.Module):
 
 
 def train(epoch):
+  mlflow.pytorch.autolog()
   network.train()
   for batch_idx, (data, target) in enumerate(train_loader):
     optimizer.zero_grad()
@@ -65,7 +66,6 @@ def test():
 
 
 if __name__=='__main__':
-    mlflow.pytorch.autolog()
     n_epochs = 3
     batch_size_train = 64
     batch_size_test = 1000
@@ -107,8 +107,9 @@ if __name__=='__main__':
     test()
     with mlflow.start_run():
         for epoch in range(1, n_epochs + 1):    
-            train(epoch)
-            test()
+            with mlflow.start_run(nested=True, run_name="Trial " + str(epoch)) as child_run:
+                train(epoch)
+                test()
 
     mlflow.end_run()
 
