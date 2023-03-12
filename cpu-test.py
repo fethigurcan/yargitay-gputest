@@ -5,6 +5,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
+import mlflow
 
 class Net(nn.Module):
     def __init__(self):
@@ -106,4 +107,6 @@ if __name__=='__main__':
     for epoch in range(1, n_epochs + 1):
       train(epoch)
       test()
+
+    mlflow.end_run()
 
