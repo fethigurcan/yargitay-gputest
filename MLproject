@@ -7,5 +7,5 @@ entry_points:
     #parameters:
     #  alpha: {type: float, default: 0.5}
     #  l1_ratio: {type: float, default: 0.1}
-    command: "python3 cpu-test.py"
+    command: "python3 bert-news-classification.py"
     # {alpha} {l1_ratio}"
