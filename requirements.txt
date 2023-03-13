@@ -2,3 +2,14 @@ datasets==2.10.1
 evaluate==0.4.0
 numpy==1.22.4
 transformers==4.25.1
+mlflow
+torchvision
+scikit-learn
+cloudpickle==1.6.0
+boto3
+pandas
+torch>=1.11.0
+torchdata
+torchtext
+pytorch-lightning
+protobuf
