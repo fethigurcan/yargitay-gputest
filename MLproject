@@ -8,7 +8,7 @@ entry_points:
       max_epochs: {type: int, default: 5}
       devices: {type: int, default: "None"}
       strategy: {type str, default: "None"}
-      accelerator: {type str, default: "cpu"}
+      accelerator: {type str, default: "gpu"}
       batch_size: {type: int, default: 64}
       num_workers: {type: int, default: 3}
       learning_rate: {type: float, default: 0.001}
