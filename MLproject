@@ -6,7 +6,7 @@ entry_points:
   main:
     parameters:
       max_epochs: {type: int, default: 5}
-      devices: {type: int, default: "None"}
+      devices: {type: int, default: "1"}
       strategy: {type str, default: "None"}
       accelerator: {type str, default: "gpu"}
       batch_size: {type: int, default: 64}
