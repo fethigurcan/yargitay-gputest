@@ -7,7 +7,7 @@ entry_points:
     parameters:
       max_epochs: {type: int, default: 5}
       devices: {type: int, default: "2"}
-      strategy: {type str, default: "ddp"}
+      strategy: {type str, default: "ddp_spawn"}
       accelerator: {type str, default: "gpu"}
       batch_size: {type: int, default: 64}
       num_workers: {type: int, default: 3}
